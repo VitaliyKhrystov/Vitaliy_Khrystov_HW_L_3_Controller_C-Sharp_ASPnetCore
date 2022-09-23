@@ -1,0 +1,28 @@
+﻿@*@model Product*@ @* 1 вариант*@
+
+@{
+    List<Product> productList = ViewBag.Product.GetProducts();
+}
+
+<div>
+
+    @* 1 вариант*@
+    @*   @foreach (var product in Model.GetProducts())   
+    {
+            <p>"Id: @product.Id"</p>
+            <p>"Name: @product.Name"</p>
+            <p>"Price: @product.Price"</p> <br />
+            <p>-------------------------------------</p> <br />
+    }*@
+
+    @* 2 вариант*@
+    @foreach (var product in productList)
+    {
+                <p>"Id: @product.Id"</p>
+                <p>"Name: @product.Name"</p>
+                <p>"Price: @product.Price"</p> <br />
+                <p>-------------------------------------</p> <br />
+    }
+
+
+</div>
